@@ -1,0 +1,23 @@
+body {
+    background-image: url(img/wall.jpg);
+    background-color: #cccccc;
+    background-size: 100%;
+}
+
+h1, .main_form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #9C1A1C;
+    background-color: white;
+}
+
+#countdown {
+    font-size: 50px;
+    color: salmon;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
