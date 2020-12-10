@@ -9,6 +9,9 @@ def insert_member_to_db(member_dict):
         return 1
     except KeyError:
         return 0
+    except Exception as  err:
+        print(err)
+        return 0
 
 
 def check_uniq_email(email):
