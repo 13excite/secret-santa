@@ -5,7 +5,7 @@ class Member(db.Model):
     __tablename__ = 'members'
 
     member_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    name = db.Column(db.String(30))
+    name = db.Column(db.String(100))
     interest = db.Column(db.String(254))
     email = db.Column(db.String(150), unique=True)
 

@@ -24,7 +24,7 @@
 
     <div class="container">
         <form action="/load" method="post" class="main_form" name="dataForm">
-            <div class="form-group"><label>Имя: <input class="form-control" type="text" required="required" placeholder="30 символов" name="name" onkeyup="allLetter(this)"></label></div>
+            <div class="form-group"><label>Имя: <input class="form-control" type="text" required="required" placeholder="100 символов" name="name" onkeyup="allLetter(this)"></label></div>
             <div class="form-group"><label>E-mail: <input class="form-control" type="text" placeholder="Email"required="required" name="email"></label></div>
             <div class="form-group"><label>Интересы: <input class="form-control text_area" type="text" placeholder="255 символов" required="required" name="interest" onkeyup="allLetter(this)"></label></div>
             <input type="submit" class="btn btn-primary" value="Отправить" onclick="allLetter(document.dataForm.name)">
