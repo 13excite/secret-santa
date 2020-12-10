@@ -3,8 +3,7 @@ body {
     background-color: #cccccc;
     background-size: 100%;
 }
-
-h1, .main_form {
+ .main_form {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -17,7 +16,35 @@ h1, .main_form {
     font-size: 50px;
     color: salmon;
     position: absolute;
-    top: 25%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #DDECEE;
+    border-radius: 10px;
+
 }
+.counter>p {
+    background-color: #DDECEE;
+    font-size: 20px;
+    color: salmon;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #DDECEE;
+    border-radius: 5px;
+}
+
+form {
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.text_area {
+    height: 75px!important;
+}
+
+input[type=submit] {
+text-align: center;
+}
+

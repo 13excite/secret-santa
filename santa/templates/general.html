@@ -19,32 +19,32 @@
 
     <title>Secret Santa</title>
 </head>
-<body>>
+<body>
     <header></header>
 
     <div class="container">
         <form action="/load" method="post" class="main_form" name="dataForm">
-            <div><label>Имя: <input type="text" required="required" placeholder="30 символов" name="name" onkeyup="allLetter(this)"></label></div>
-            <div><label>Интересы: <input type="text" placeholder="255 символов" required="required" name="interest" onkeyup="allLetter(this)"></label></div>
-            <div><label>E-mail: <input type="text"  placeholder="Email"required="required" name="email"></label></div>
-            <input type="submit" value="Отправить" onclick="allLetter(document.dataForm.name)">
+            <div class="form-group"><label>Имя: <input class="form-control" type="text" required="required" placeholder="30 символов" name="name" onkeyup="allLetter(this)"></label></div>
+            <div class="form-group"><label>E-mail: <input class="form-control" type="text" placeholder="Email"required="required" name="email"></label></div>
+            <div class="form-group"><label>Интересы: <input class="form-control text_area" type="text" placeholder="255 символов" required="required" name="interest" onkeyup="allLetter(this)"></label></div>
+            <input type="submit" class="btn btn-primary" value="Отправить" onclick="allLetter(document.dataForm.name)">
         </form>
 
-        <p id="countdown"></p>
+        <div class="counter"><p >До закрытия сбора заявок</p> <p id="countdown"></p></div>
 
 
         {% with messages = get_flashed_messages() %}
-    {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                <span>{{ message }}</span>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        {% endfor %}
-    {% endif %}
-{% endwith %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                        <span>{{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
 
     </div>
 </body>
