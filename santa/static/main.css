@@ -18,26 +18,34 @@ body {
     position: absolute;
     top: 10%;
     left: 50%;
+    margin-top: 7px;
+    padding-left: 2px;
+    padding-right: 2px;
     transform: translate(-50%, -50%);
-    background-color: #DDECEE;
+    background-color: snow;
     border-radius: 10px;
 
 }
 .counter>p {
-    background-color: #DDECEE;
+    background-color: snow;
     font-size: 20px;
     color: salmon;
+    margin-top: 7px;
+    padding-left: 2px;
+    padding-right: 2px;
     position: absolute;
     top: 2%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #DDECEE;
     border-radius: 5px;
 }
 
 form {
-    padding: 50px;
+    padding: 40px;
     border-radius: 10px;
+    border-style: dashed;
+    border-color: red mediumseagreen;
+    border-width: 5px;
 }
 
 .text_area {
@@ -48,3 +56,41 @@ input[type=submit] {
 text-align: center;
 }
 
+input {
+    width: 300px!important;
+}
+
+@media (max-width: 660px) {
+    #countdown {
+        font-size: 35px;
+    }
+    .counter>p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 455px) {
+    #countdown {
+        font-size: 27px;
+    }
+    .counter>p {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 375px) {
+    #countdown {
+        font-size: 28px;
+    }
+    .counter>p {
+        margin-top: 8px;
+        font-size: 13px;
+    }
+    form {
+        padding: 20px;
+    }
+    input {
+        width: 200px!important;
+    }
+}
