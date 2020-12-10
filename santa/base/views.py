@@ -5,7 +5,7 @@ from santa.base.dao import insert_member_to_db, check_uniq_email
 base_blueprint = Blueprint('base', __name__, template_folder='templates')
 
 VALID_EMAIL = '^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$'
-VALID_LETTERS = '^[0-9a-zA-ZА-ЯЁа-яё,\.!\:\?\-]+$'
+VALID_LETTERS = '^[0-9a-zA-ZА-ЯЁа-яё\s,\.!\:\?\-]+$'
 
 
 def is_valid_mail(email):
