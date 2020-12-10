@@ -7,11 +7,11 @@ class Member(db.Model):
     member_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(30))
     interest = db.Column(db.String(254))
-    email = db.Column(db.String(150))
+    email = db.Column(db.String(150), unique=True)
 
-    def __init__(self, member_id, name, interest, email):
+    def __init__(self, name, interest, email):
         self.name = name
-        self.member_id = member_id
+        #self.member_id = member_id
         self.interest = interest
         self.email = email
 
