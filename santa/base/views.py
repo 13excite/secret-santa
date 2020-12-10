@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, jsonify, request, flash, redirect
 import re
+from santa.base.dao import insert_member_to_db, check_uniq_email
 
 base_blueprint = Blueprint('base', __name__, template_folder='templates')
 
@@ -44,5 +45,17 @@ def add_data():
     if not is_valid_mail(email):
         flash("Некорректный email. Используйте формат exmaple@example.zyx")
         return redirect('/')
-    return jsonify("OK")
+
+    if check_uniq_email(email):
+        flash("Что-то пошло не так, возможно вы уже зарегистрированны")
+        return redirect('/')
+
+    member_dict = {'name': name, 'email': email, 'interest': interest}
+    db_code = insert_member_to_db(member_dict)
+    if db_code:
+        flash('Вы успешно зарегистрированы! Скоро на почту придет информация о тайном внучке или внучке')
+        return redirect('/')
+    else:
+        flash('Что-то пошло не так, обратитесь к организатору')
+        return redirect('/')
 
